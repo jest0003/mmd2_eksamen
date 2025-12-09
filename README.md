@@ -1,46 +1,23 @@
-# Astro Starter Kit: Basics
+# ReadMe Eksamen
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Projektstruktur:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Gruppen har valgt at organisere vores projekt igennem astro, hvor vi bruger komponenter for at skulle skrive mindre kode i sidste ende.
+Vi husker altid at arbejde i hver vores branch, og man rør ikke ved de andres sider!
 
-## 🚀 Project Structure
+## Navngivning:
 
-Inside of your Astro project, you'll see the following folders and files:
+Gruppen besluttede at navngive filer tydelige og forståelig, det gør ikke noget at navnet er langt, så længe det beskriver filen godt, hvis der er flere ord bruger vi underscore som mellemrum.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Git branches:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Vi navngiver efter hvad vi arbejdere på og hvem der arbejder på det (f.eks. header_ida).
 
-## 🧞 Commands
+## Arbejdsflow:
 
-All commands are run from the root of the project, from a terminal:
+Fordeling af arbejde:
+Vi har en fælles aftale om, hvem der arbejder på hvilken side og laver hver branches til de respektive sider, vi arbejder på. På denne måde har vi hver vores egen branch og arbejder derfor ikke oveni hinandens kode, samt undgår at overskrive koderne i merge, fordi vi arbejder på hver vores side.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Vi forklarer hvad der er ændret i vores kode i hver commit beskrivelse, for at få et overblik over de nye opdateringer og/eller tilføjelser.
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Når vi arbejder sammen fysisk, fortæller vi, når vi merger vores branch med master. Når vi ikke er fysisk til stede, er vi enten på et teams møde eller vores fælles gruppe chat og informerer, når der er blevet merget med master, så der er kode der kan hentes/pulles.
