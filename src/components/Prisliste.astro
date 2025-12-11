@@ -5,12 +5,12 @@ const { data } = Astro.props;
 
   <div>
     <h2>{data.overskrift}</h2>
+     <h3>{data.underoverskrift_1}</h3>
     <p>{data.broedtekst_1}</p>
     <p>{data.broedtekst_2}</p>
-    <h3>{data.underoverskrift_1}</h3>
   </div>
 
-  <div>
+  <div id="test">
     
     <div class="pris-row">
       <span>{data.pristekst_1}</span>
@@ -28,8 +28,11 @@ const { data } = Astro.props;
     </div>
   </div>
 
-
+<div>
   <h3>{data.underoverskrift_2}</h3>
+  <p>1-2 dage</p>
+</div>
+
   <div>
     <div class="pris-row">
       <span>{data.pristekst_4}</span>
@@ -37,8 +40,10 @@ const { data } = Astro.props;
     </div>
   </div>
 
-  <!-- Ny gruppe -->
+<div>
   <h3>{data.underoverskrift_3}</h3>
+  <p>1-2 dage</p>
+  </div>
   <div>
     <div class="pris-row">
       <span>{data.pristekst_5}</span>
@@ -64,8 +69,9 @@ const { data } = Astro.props;
   grid-template-columns: 1.4fr 1fr;
   gap: 40px;
   padding: 40px 0;
-  border-bottom: 1px solid #dcdcdc;
 }
+
+#test{}
 
 
 .pris-row {
@@ -99,6 +105,7 @@ h3 {
 p,
 span {
   font-family: montserrat-r;
+  font-size: 20px;
   margin: 4px 0;
 }
 </style>
