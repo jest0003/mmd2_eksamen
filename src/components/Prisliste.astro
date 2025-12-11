@@ -1,32 +1,58 @@
 ---
 const { data } = Astro.props;
 ---
-
 <section>
-  <div>
+  <div class="pris-section">
     <h2>{data.overskrift}</h2>
     <p>{data.broedtekst_1}</p>
     <p>{data.broedtekst_2}</p>
+  </div>
 
+  <div class="pris-section">
     <h3>{data.underoverskrift_1}</h3>
-    <p>{data.pristekst_1}</p>
-    <p>{data.pris_1}</p>
-    <p>{data.pristekst_2}</p>
-    <p>{data.pris_2}</p>
-    <p>{data.pristekst_3}</p>
-    <p>{data.pris_3}</p>
 
+    <div class="pris-row">
+      <p>{data.pristekst_1}</p>
+      <p>{data.pris_1}</p>
+    </div>
+
+    <div class="pris-row">
+      <p>{data.pristekst_2}</p>
+      <p>{data.pris_2}</p>
+    </div>
+
+    <div class="pris-row">
+      <p>{data.pristekst_3}</p>
+      <p>{data.pris_3}</p>
+    </div>
+  </div>
+
+  <div class="pris-section">
     <h3>{data.underoverskrift_2}</h3>
-    <p>{data.pristekst_4}</p>
-    <p>{data.pris_4}</p>
 
+    <div class="pris-row">
+      <p>{data.pristekst_4}</p>
+      <p>{data.pris_4}</p>
+    </div>
+  </div>
+
+  <div class="pris-section">
     <h3>{data.underoverskrift_3}</h3>
-    <p>{data.pristekst_5}</p>
-    <p>{data.pris_5}</p>
-    <p>{data.pristekst_6}</p>
-    <p>{data.pris_6}</p>
-    <p>{data.pristekst_7}</p>
-    <p>{data.pris_7}</p>
+
+    <div class="pris-row">
+      <p>{data.pristekst_5}</p>
+      <p>{data.pris_5}</p>
+    </div>
+
+    <div class="pris-row">
+      <p>{data.pristekst_6}</p>
+      <p>{data.pris_6}</p>
+    </div>
+
+    <div class="pris-row">
+      <p>{data.pristekst_7}</p>
+      <p>{data.pris_7}</p>
+    </div>
   </div>
 </section>
 
@@ -34,4 +60,49 @@ const { data } = Astro.props;
 section {
   margin-bottom: 80px; /* hver sektion adskilt som i prototype */
 }
+
+section {
+  margin-bottom: 60px;
+}
+
+.pris-section {
+  padding: 20px 0;
+  border-bottom: 1px solid #dcdcdc; /* den grå streg */
+}
+
+.pris-section:last-child {
+  border-bottom: none; /* ingen streg på sidste sektion */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 4px 0;
+}
+
+.pris-row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* tekst venstre – pris højre */
+  gap: 12px;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.pris-row p {
+  margin: 0;
+}
+
+
+
 </style>
