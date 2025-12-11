@@ -80,7 +80,7 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
               Medbring altid billede ID, det er lovpligtigt for at vi kan
               gennemføre salget.
             </li>
-            <p>På forhånd, tak.</p>
+            <p>På forhånd, tak!</p>
           </ul>
         </section>
       </InfoBox>
@@ -139,6 +139,8 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
     color: #ffffff;
     padding-left: 20px;
     font-family: montserrat-r;
+    line-height: 1.6;
+    font-size: 20px;
   }
 
   .infoboxes {
@@ -148,7 +150,7 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
     margin: 20px 0;
     max-width: fit-content;
   }
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     body,
     html {
       width: 100%;
@@ -163,6 +165,14 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
 
     .infoboxes {
       grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
     }
   }
 </style>
