@@ -1,0 +1,30 @@
+---
+import Prisliste from "../components/Prisliste.astro";
+import "../css/general.css";
+const endpoint =
+  "https://irkyvjhklbgwyaruwrgp.supabase.co/rest/v1/prisliste?select=*&order=id.asc";
+  
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlya3l2amhrbGJnd3lhcnV3cmdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzNTk0MjksImV4cCI6MjA4MDkzNTQyOX0.qbPtnd2OIIoEmHX2MRnc_PMZdoL2nHHkNS0sL4TiJJ4";
+const options = {
+  method: "GET",
+  headers: {
+    apikey: key,
+  },
+};
+const data = await fetch(endpoint, options).then((res) => res.json());
+---
+
+<section class="card">
+  {data.map((product) => <Prisliste data={product} />)}
+</section>
+
+<style>
+section{
+    background-color: white;
+    border-radius: 30px;
+    margin: 140px;
+    margin-bottom: 10px;
+}
+
+</style>

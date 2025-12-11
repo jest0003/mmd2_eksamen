@@ -1,0 +1,41 @@
+---
+const {href} = Astro.props;
+---
+
+
+<a {href}><slot/></a>
+
+
+
+<style>
+
+
+
+/* a{
+border-style: none;
+border-bottom-style: solid;
+border-bottom-width: thick;
+} */
+
+a {
+  font-family: montserrat-m;
+  font-size: 24px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 50%, #FFC446 50%);
+  max-width: 200px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+a:hover{
+  font-family: montserrat-sb;
+  font-size: 24px;
+  height: 100%;
+  background: #FFC446;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
