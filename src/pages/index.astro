@@ -5,8 +5,10 @@ import Objektiv from "../img/objektiv.webp";
 import kontorartikler from "../img/kontorartikler.webp";
 import moenter from "../img/moenter.webp";
 import GLS from "../img/gls.webp";
-import gul_top from "../img/gul_bolge_top.webp"
-import gul_bund from "../img/gul_bolge_bund.webp"
+import gul_top from "../img/gul_bolge_top.webp";
+import gul_bund from "../img/gul_bolge_bund.webp";
+import hvid_top from "../img/hvid_top.webp";
+import Karrusel_ex from "../components/Karrusel.astro";
 ---
 
 <Layout>
@@ -28,9 +30,11 @@ Med årtiers erfaring og en passion for kvalitet kan du stole på, at vi guider 
 <img class="streach" src={gul_bund.src} alt="">
 <section>
     <h2>UDFORSK</h2>
+    <Karrusel_ex />
 </section>
 
-<div>
+<img class="streach" src={hvid_top.src} alt="">
+<div class="hvid_bg">
     <section class="grid_1-1">
 <article class="dark_blue">
     <div class="flex_r">
@@ -68,6 +72,10 @@ Med årtiers erfaring og en passion for kvalitet kan du stole på, at vi guider 
     .hero {
         margin-bottom: 100px;
         margin-top: 90px;
+    }
+    .hvid_bg {
+        background-color: white;
+        padding-top: 60px;
     }
     .gul_bg {
         background-color: #ffd87d;
@@ -129,7 +137,7 @@ padding-right: 10px;
 background-color: #091F5B;
     border-radius: 25px;
 padding: 20px;
-margin-bottom: 40px;
+margin-bottom: 10px;
  position: relative;
     overflow: visible;
 }
@@ -146,6 +154,9 @@ margin-bottom: 40px;
     width: auto;
 }
 @media (max-width: 799px) {
+    .light_blue {
+        margin-top: 60px;
+    }
     .flex_r {
         position: relative;
         display: flex;
@@ -215,7 +226,7 @@ margin-bottom: 40px;
     .grid_1-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 40px;
     }
     .grid_3-1 {
         display: grid;

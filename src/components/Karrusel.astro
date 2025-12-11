@@ -1,0 +1,77 @@
+---
+import "../css/general.css";
+import filmrulle from "../img/filmrulle.webp";
+import pas from "../img/pas.webp";
+import analig from "../img/oldschoolanalog.webp";
+---
+<section>
+    <article>
+    <img src={filmrulle.src} alt="">
+    <span></span>
+    <a href="/fremkald">FREMKALD</a>
+    </article>
+
+    <article>
+    <img src={pas.src} alt="Illustration af et åbent pas">
+    <span></span>
+    <a href="/pasfoto">PASFOTO</a>
+    </article>
+
+    <article>
+    <img src={analig.src} alt="">
+    <span></span>
+    <a href="/kamera">KAMERA</a>
+    </article>
+</section>
+
+<style>
+
+    article {
+        width: 320px;
+        height: 320px;
+        background-color: white;
+        border-radius: 25px;
+        position: relative;
+    }
+    article:hover {
+        background-color: #E5F3FF;
+    }
+    img {
+        max-height: 250px;
+        max-width: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    a {
+        color: white;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 25px;
+        font-family: montserrat-m;
+        font-size: 24px;
+        margin: 0;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    span {display: block;
+background-color: #091F5B;
+height: 55px;
+width: 180px;
+border-radius: 18px;
+position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    section {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 60px;
+        justify-content: space-between;
+    }
+</style>
