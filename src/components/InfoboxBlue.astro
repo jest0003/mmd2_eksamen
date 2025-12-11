@@ -1,0 +1,26 @@
+---
+const { headlines, infotext, list } = Astro.props;
+---
+
+<section class="InfoboxBlue">
+  <div class="Infobox1">
+    <slot />
+  </div>
+  <div class="Infobox2">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .InfoboxBlue {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #091f5b;
+    color: #ffffff;
+    padding: 40px 40px;
+    margin: 20px 0;
+    border-radius: 5px;
+    max-width: fit-content;
+  }
+</style>

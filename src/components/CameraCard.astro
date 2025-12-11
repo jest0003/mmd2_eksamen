@@ -6,8 +6,8 @@ import Circle from "../img/circleelement.webp";
 <section class="camera-section">
   <div class="img-text-container">
     <div class="img-container">
-      <img src={Circle.src} alt="Circle element" class="Circle" />
       <img src={src} alt="Point and shoot kamera" class="Camimg" />
+      <img src={Circle.src} alt="Circle element" class="Circle" />
     </div>
     <div class="text-container">
       <h2>{headline}</h2>
@@ -20,11 +20,9 @@ import Circle from "../img/circleelement.webp";
   .camera-section {
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0px;
-    max-width: calc(100% - 40px);
+    padding: 40px;
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
     overflow: visible;
   }
 
@@ -36,12 +34,11 @@ import Circle from "../img/circleelement.webp";
 
   .img-container {
     position: relative;
-    flex: 1;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
-    min-height: 200px;
+    margin-left: 20px;
   }
 
   .Camimg {
@@ -50,40 +47,54 @@ import Circle from "../img/circleelement.webp";
     height: auto;
     position: relative;
     z-index: 2;
-    margin-left: -40px;
+    margin-left: 10px;
+    right: 25%;
+    bottom: 5%;
   }
 
   .Circle {
     position: absolute;
-    width: 200px;
+    width: 250px;
     height: auto;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -5%;
+    right: 54%;
     z-index: 1;
   }
 
   .text-container {
-    flex: 2;
-    padding: 10px 20px;
+    flex: 1;
+    padding: 20px 10px;
     text-align: left;
   }
 
   .text-container h2 {
     margin-top: 0;
     font-size: 2em;
-    color: #333;
   }
 
-  @media (max-width: 800px) {
+  .text-container p {
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1000px) {
     .img-text-container {
       flex-direction: column;
       text-align: center;
     }
 
     .img-container {
-      margin-right: 0;
-      margin-bottom: 20px;
+      margin-left: 0;
+      margin-top: 20px;
+      order: -1;
+    }
+
+    .Camimg {
+      transform: scaleX(-1) translateX(0%);
+    }
+
+    .Circle {
+      bottom: -20%;
+      right: 10%;
     }
   }
 </style>

@@ -5,16 +5,21 @@ import CameraCard from "../components/CameraCard.astro";
 import CameraCardreverse from "../components/CameraCardsreverse.astro";
 import Pointnshoot from "../img/pointnshoot.webp";
 import Oldschool from "../img/oldschoolanalog.webp";
+import Engangskamera from "../img/engangskamera.webp";
+import Instax from "../img/instax.webp";
+import InfoBox from "../components/InfoboxBlue.astro";
 ---
 
 <Layout>
   <section class="Kameraside">
-    <h1>Kamera</h1>
-    <p class="introtext">
-      Hos NV Foto sælger vi brugte Analog kamera samt tilbehør til dit kamera.
-      Vi tester vi altid de brugte kamera inden vi sætter dem på hylden så du
-      kan være tryg ved, at alt fungerer præcis som det skal.
-    </p>
+    <div class="introtext">
+      <h1>Kamera</h1>
+      <p>
+        Hos NV Foto sælger vi brugte Analog kamera samt tilbehør til dit kamera.
+        Vi tester vi altid de brugte kamera inden vi sætter dem på hylden så du
+        kan være tryg ved, at alt fungerer præcis som det skal.
+      </p>
+    </div>
     <CameraCard
       src={Pointnshoot.src}
       headline="POINT AND SHOOT"
@@ -26,21 +31,37 @@ import Oldschool from "../img/oldschoolanalog.webp";
       bodytext="Disse kameraer er for dig, der vil fordybe dig i selve fotografi-håndværket. Her er der tid til at tænke, indstille og skabe billeder med sjæl. Uanset om du er nybegynder eller erfaren, giver disse kameraer dig en ægte, ufiltreret oplevelse og resultater, der er værd at vente på. Billederne har sandt karakter, sjæl og et udtryk, du selv har formet helt fra starten."
     />
     <CameraCard
-      src={Pointnshoot.src}
-      headline="POINT AND SHOOT"
-      bodytext="Point-and-shoot kameraer er perfekte til dig, der vil fange øjeblikke uden at tænke for meget over indstillingerne på kameraet. De er kompakte, nemme at have med i tasken og klar til at skyde, så snart du trykker på knappen. Et lille, ukompliceret kamera med masser af charme og den særlige analoge følelse."
+      src={Engangskamera.src}
+      headline="ENGANGSKAMERA"
+      bodytext="Engangskameraer er den nemmeste måde at tage analoge billeder på! Perfekt til fester, rejser og små hverdagseventyr, hvor det handler mere om stemningen end det perfekte skud. Ukompliceret, sjovt og altid autentisk."
     />
     <CameraCardreverse
-      src={Oldschool.src}
-      headline="OLD SCHOOL ANALOG"
-      bodytext="Disse kameraer er for dig, der vil fordybe dig i selve fotografi-håndværket. Her er der tid til at tænke, indstille og skabe billeder med sjæl. Uanset om du er nybegynder eller erfaren, giver disse kameraer dig en ægte, ufiltreret oplevelse og resultater, der er værd at vente på. Billederne har sandt karakter, sjæl og et udtryk, du selv har formet helt fra starten."
+      src={Instax.src}
+      headline="INSTAX"
+      bodytext="Instax er for dig, der vil fange livets små, sjove og uforglemmelige øjeblikke og have dem i hånden med det samme. Med sit ikoniske, kompakte design og farverige billeder er Instax perfekt til at skabe fysiske minder, der er klar til at blive sat på køleskabet, sat i rammer eller delt med venner. Ideelt til fester, rejser eller bare en hyggelig dag med vennerne."
     />
+    <InfoBox>
+      <section class="infobox">
+        <h2>FILM TIL DIT KAMERA</h2>
+        <p>
+          Når du køber et analog kamera, skal der film til, for at det kan
+          bruges.
+        </p>
+        <p>Vi bestræber os på at have disse film hjemme, i 135mm og 120mm:</p>
+        <ul>
+          <li>Fuji</li>
+          <li>Portra</li>
+          <li>Kodak</li>
+          <li>Ilford</li>
+        </ul>
+      </section>
+    </InfoBox>
   </section>
 </Layout>
 
 <style>
   .Kameraside {
-    margin: 0 130px;
+    margin: auto 130px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -49,5 +70,16 @@ import Oldschool from "../img/oldschoolanalog.webp";
 
   .introtext {
     max-width: 600px;
+  }
+
+  .infobox h2,
+  .infobox p {
+    color: #ffffff;
+  }
+
+  .infobox ul {
+    color: #ffffff;
+    padding-left: 20px;
+    font-family: montserrat-r;
   }
 </style>
