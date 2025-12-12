@@ -28,9 +28,9 @@ const { data } = Astro.props;
     </div>
   </div>
 
-<div>
+<div class="linje">
   <h3>{data.underoverskrift_2}</h3>
-  <p>1-2 dage</p>
+  <p>{data.broedtekst_1}</p>
 </div>
 
   <div>
@@ -42,7 +42,7 @@ const { data } = Astro.props;
 
 <div>
   <h3>{data.underoverskrift_3}</h3>
-  <p>1-2 dage</p>
+  <p>{data.dagetekst_1}</p>
   </div>
   <div>
     <div class="pris-row">
@@ -81,9 +81,7 @@ const { data } = Astro.props;
   border-bottom: 1px solid #00071A;
 }
 
-.pris-row span:last-child {
-  font-weight: 500;
-}
+
 
 section {
   margin-bottom: 80px;

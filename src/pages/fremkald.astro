@@ -8,28 +8,32 @@ import Priskort from "../components/Priskort.astro";
 ---
 
 <Layout>
-<section class="grid">
+
+<section class="grid-container">
+    <div class="box" style="grid-area: box-1;">
+        <h1>FREMKALD</h1>
+        <p>Vi har vores eget laboratorie hvor vi fremkalder billeder fra digital- og  analog kamera. Vi fremkalder også billeder direkte fra din smartphone!
+        Få dine minder fremkaldt – aflevér din film i butikken i dag! </p>
+    </div>
+
+    <div class="box flex" style="grid-area: box-2;">
+        <CTAbtn>Film</CTAbtn>
+        <CTAbtn>Digitalt medie</CTAbtn>
+        <CTAbtn>Båndvideo</CTAbtn>
+    </div>
 
 
-<div id="intro">
-<h1>FREMKALD</h1>
-<p class="span2">Vi har vores eget laboratorie hvor vi fremkalder billeder fra digital- og  analog kamera. Vi fremkalder også billeder direkte fra din smartphone!
-Få dine minder fremkaldt – aflevér din film i butikken i dag! </p>
-
-<div class="flex">
-<CTAbtn>Film</CTAbtn>
-<CTAbtn>Digitalt medie</CTAbtn>
-<CTAbtn>Båndvideo</CTAbtn>
-</div>
-
-<h3 class="span2">OBS! Der pålægges gebyr på alt sort hvid film og ekstra leverings tid (3-5 dage i stedet for 1-2 dage)</h3>
-</div>
+    <div class="box" style="grid-area: box-3;">
+        <h3>OBS! Der pålægges gebyr på alt sort hvid film og ekstra leverings tid (3-5 dage i stedet for 1-2 dage)</h3>
+    </div>
 
 
-
-<img src={filmimg.src} alt="Logo" />
+    <div class="box" style="grid-area: box-4;">
+        <img src={filmimg.src} alt="Logo" />
+    </div>
 
 </section>
+
 
 <Priskort></Priskort>
 
@@ -49,20 +53,41 @@ Få dine minder fremkaldt – aflevér din film i butikken i dag! </p>
 </section>
 
 <style>
-
 section{
-  margin: 140px;
+  margin: 100px;
 }
 
-.grid{
-    margin: 140px;
-    gap: 1em;
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    flex-basis: max-content;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    background-color: #E5F3FF;
+    padding: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 30px;
+}
+
+.grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    gap: 2em;
+    grid-template-areas: 
+    "box-1 box-1 box-1 box-1 box-4"
+    "box-2 box-2 box-2 box-2 box-4"
+    "box-3 box-3 box-3 box-3 box-4";
 }
 
-#intro{
-    grid-column: span 2;
+.grid-container h1{
+    margin-top: -5px;
+    margin-bottom: -20px;
 }
 
 #gul-kasse{
@@ -71,66 +96,52 @@ section{
     border-radius: 30px;
 }
 
-img{
-    max-width: 100%;
-    height: 450px;
-    background-color: #E5F3FF;
-    padding: 80px;
-    border-radius: 30px;
-    grid-column: 3;
-}
-
 ul,li {
   font-family: montserrat-r;
   font-size: 20px;
 }
 
-.flex{
-    display: flex;
-    flex-direction: column;
-}
 
- @media (max-width: 800px) {
-
-.grid{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-#intro{
+@media (max-width: 1000px) {
+  .grid-container{
     display: grid;
-        grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    gap: 2em;
+    grid-template-areas: 
+    "box-1 box-1 box-1 box-4"
+    "box-2 box-2 box-2 box-4"
+    "box-3 box-3 box-3 box-4";
 }
 
-#intro h1{
-    grid-column: 1;
-    grid-row: 1;
-}
-#intro p{
-    grid-column: 1/3;
-    grid-row: 1;
-    margin-top: 100px;
 }
 
-.flex{
-    grid-column: 1;
-    grid-row: 2;
+
+@media (max-width: 800px) {
+    .grid-container{
+    display: grid;
+    grid-template-columns: 200px 200px ;
+    grid-template-rows: 200px 200px 200px;
+    gap: 2em;
+    grid-template-areas: 
+    "box-1 box-1"
+    "box-2 box-4"
+    "box-3 box-3";
 }
 
-#intro h3{
-    grid-column: 1;
-    grid-row: 4;
+img{
+    max-width: 100%;
+    height: 150px;
+    background-color: #E5F3FF;
+    padding: 3cap;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
 }
 
-section img{
-    height: 100px;
-    grid-column: 2;
-    grid-row: 2;
+
+
 }
-
- }
-
 
 
 </style>
