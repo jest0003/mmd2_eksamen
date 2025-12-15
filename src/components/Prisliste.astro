@@ -13,13 +13,13 @@ import CTAbtn from "./CTAbtn.astro";
         <h2>Film</h2>
         <h3>135 mm</h3>
         <p>1–2 dage</p>
-        <p>Engangskamera 10 kr ekstra — ved APS er der gebyr på 10 til 50 kr alt efter hvad der skal laves. </p>
+        <p class="line">Engangskamera 10 kr ekstra — ved APS er der gebyr på 10 til 50 kr alt efter hvad der skal laves. </p>
 
         <h3>120 mm</h3>
-        <p>1–2 dage</p>
+        <p class="line">1–2 dage</p>
 
         <h3>E6</h3>
-        <p>3-5 dage</p>
+        <p class="line">3-5 dage</p>
       </div>
     )}
 
@@ -104,9 +104,19 @@ import CTAbtn from "./CTAbtn.astro";
 .grid-price{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 100px 100px 100px;
+  grid-template-rows: 225px 100px 90px 100px;
   gap: 1em;
 }
+
+.grid-price .price-row{
+  border-bottom: 2px solid black;
+}
+
+.line{
+  border-bottom: 2px solid black;
+}
+
+
 
   .box{
     background-color: aquamarine;
