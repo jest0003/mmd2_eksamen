@@ -1,5 +1,5 @@
 ---
-const { src, img, headline, bodytext, hoverSrc, hoverimg } = Astro.props;
+const { src, headline, bodytext } = Astro.props;
 import Circle from "../img/circleelement.webp";
 ---
 
@@ -7,7 +7,6 @@ import Circle from "../img/circleelement.webp";
   <div class="img-text-container">
     <div class="img-container">
       <img src={src} alt="Camera" class="Camimg" />
-      <img src={hoverSrc} alt="Camera Hover" class="Camimg hover-img" />
       <img src={Circle.src} alt="Circle element" class="Circle" />
     </div>
     <div class="text-container">
@@ -22,7 +21,7 @@ import Circle from "../img/circleelement.webp";
     background-color: #ffffff;
     border-radius: 10px;
     padding: 2rem;
-    margin: 20px 0px 20px;
+    margin: 20px 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
   }
@@ -48,26 +47,8 @@ import Circle from "../img/circleelement.webp";
     position: relative;
     z-index: 2;
     margin-left: 10px;
-    right: 22%;
+    right: 25%;
     bottom: 5%;
-  }
-
-  .hover-img {
-    position: absolute;
-    width: auto;
-    max-width: 300px;
-    height: auto;
-    z-index: 3;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    margin-left: 10px;
-    right: 22%;
-    bottom: 0%;
-    pointer-events: none;
-  }
-
-  .img-container:hover .hover-img {
-    opacity: 1;
   }
 
   .Circle {
@@ -92,22 +73,15 @@ import Circle from "../img/circleelement.webp";
     }
     .img-container {
       margin-top: 30px;
-      margin-bottom: 20px;
       margin-left: 50px;
       order: -1;
     }
-    .Camimg,
-    .hover-img {
+    .Camimg {
       margin: auto;
       right: 0;
-      width: 100%;
-      max-width: 300px;
-      max-height: 300px;
     }
     .Circle {
-      bottom: auto;
       left: -5%;
-      max-width: 100%;
     }
 
     .text-container h2 {

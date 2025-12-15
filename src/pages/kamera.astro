@@ -14,7 +14,7 @@ import PointnshootHover from "../img/pointnshoothover.webp";
 import OldschoolHover from "../img/oldschoolanaloghover.webp";
 import EngangskameraHover from "../img/engangskamerahover.webp";
 import InstaxHover from "../img/instaxhover.webp";
-import CameraCardnohover from "../components/CameraCardnohover.astro";
+import CTAbtn from "../components/CTAbtn.astro";
 ---
 
 <Layout>
@@ -26,32 +26,41 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
         Vi tester vi altid de brugte kamera inden vi sætter dem på hylden så du
         kan være tryg ved, at alt fungerer præcis som det skal.
       </p>
+      <div class="box-flex">
+        <CTAbtn href="#camera-anchor" aria-label="Gå til kamera">Kamera</CTAbtn>
+        <CTAbtn href="#film-anchor" aria-label="Gå til film">Film</CTAbtn>
+        <CTAbtn href="#tilbehor-anchor" aria-label="Gå til tilbehør"
+          >Tilbehør</CTAbtn
+        >
+      </div>
     </div>
-    <CameraCard
-      src={Pointnshoot.src}
-      hoverSrc={PointnshootHover.src}
-      headline="POINT AND SHOOT"
-      bodytext="Point-and-shoot kameraer er perfekte til dig, der vil fange øjeblikke uden at tænke for meget over indstillingerne på kameraet. De er kompakte, nemme at have med i tasken og klar til at skyde, så snart du trykker på knappen. Et lille, ukompliceret kamera med masser af charme og den særlige analoge følelse."
-    />
-    <CameraCardreverse
-      src={Oldschool.src}
-      hoverSrc={OldschoolHover.src}
-      headline="OLD SCHOOL ANALOG"
-      bodytext="Disse kameraer er for dig, der vil fordybe dig i selve fotografi-håndværket. Her er der tid til at tænke, indstille og skabe billeder med sjæl. Uanset om du er nybegynder eller erfaren, giver disse kameraer dig en ægte, ufiltreret oplevelse og resultater, der er værd at vente på. Billederne har sandt karakter, sjæl og et udtryk, du selv har formet helt fra starten."
-    />
-    <CameraCard
-      src={Engangskamera.src}
-      hoverSrc={EngangskameraHover.src}
-      headline="ENGANGSKAMERA"
-      bodytext="Engangskameraer er den nemmeste måde at tage analoge billeder på! Perfekt til fester, rejser og små hverdagseventyr, hvor det handler mere om stemningen end det perfekte skud. Ukompliceret, sjovt og altid autentisk."
-    />
-    <CameraCardreverse
-      src={Instax.src}
-      hoverSrc={InstaxHover.src}
-      headline="INSTAX"
-      bodytext="Instax er for dig, der vil fange livets små, sjove og uforglemmelige øjeblikke og have dem i hånden med det samme. Med sit ikoniske, kompakte design og farverige billeder er Instax perfekt til at skabe fysiske minder, der er klar til at blive sat på køleskabet, sat i rammer eller delt med venner. Ideelt til fester, rejser eller bare en hyggelig dag med vennerne."
-    />
-    <div class="infoboxes-container">
+    <div id="camera-anchor">
+      <CameraCard
+        src={Pointnshoot.src}
+        hoverSrc={PointnshootHover.src}
+        headline="POINT AND SHOOT"
+        bodytext="Point-and-shoot kameraer er perfekte til dig, der vil fange øjeblikke uden at tænke for meget over indstillingerne på kameraet. De er kompakte, nemme at have med i tasken og klar til at skyde, så snart du trykker på knappen. Et lille, ukompliceret kamera med masser af charme og den særlige analoge følelse."
+      />
+      <CameraCardreverse
+        src={Oldschool.src}
+        hoverSrc={OldschoolHover.src}
+        headline="OLD SCHOOL ANALOG"
+        bodytext="Disse kameraer er for dig, der vil fordybe dig i selve fotografi-håndværket. Her er der tid til at tænke, indstille og skabe billeder med sjæl. Uanset om du er nybegynder eller erfaren, giver disse kameraer dig en ægte, ufiltreret oplevelse og resultater, der er værd at vente på. Billederne har sandt karakter, sjæl og et udtryk, du selv har formet helt fra starten."
+      />
+      <CameraCard
+        src={Engangskamera.src}
+        hoverSrc={EngangskameraHover.src}
+        headline="ENGANGSKAMERA"
+        bodytext="Engangskameraer er den nemmeste måde at tage analoge billeder på! Perfekt til fester, rejser og små hverdagseventyr, hvor det handler mere om stemningen end det perfekte skud. Ukompliceret, sjovt og altid autentisk."
+      />
+      <CameraCardreverse
+        src={Instax.src}
+        hoverSrc={InstaxHover.src}
+        headline="INSTAX"
+        bodytext="Instax er for dig, der vil fange livets små, sjove og uforglemmelige øjeblikke og have dem i hånden med det samme. Med sit ikoniske, kompakte design og farverige billeder er Instax perfekt til at skabe fysiske minder, der er klar til at blive sat på køleskabet, sat i rammer eller delt med venner. Ideelt til fester, rejser eller bare en hyggelig dag med vennerne."
+      />
+    </div>
+    <div class="infoboxes-container" id="film-anchor">
       <InfoBox>
         <h2>FILM TIL DIT KAMERA</h2>
         <p>
@@ -81,12 +90,14 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
         </ul>
       </InfoBox>
     </div>
-    <CameraCard
-      src={Tilbehor.src}
-      hoverSrc={Tilbehorhover.src}
-      headline="KAMERA TILBEHØR"
-      bodytext="Hos NV Foto finder du alt det tilbehør, der gør din fotografoplevelse endnu bedre. Uanset om du leder efter det perfekte objektiv, en UV-linse, en blitz, eller en solidt tripod, vi har det, der gør dit kamera endnu mere alsidigt. Kom forbi og udforsk, hvordan det rette tilbehør kan forvandle dine øjeblikke til noget ekstraordinært."
-    />
+    <div id="tilbehor-anchor">
+      <CameraCard
+        src={Tilbehor.src}
+        hoverSrc={Tilbehorhover.src}
+        headline="KAMERA TILBEHØR"
+        bodytext="Hos NV Foto finder du alt det tilbehør, der gør din fotografoplevelse endnu bedre. Uanset om du leder efter det perfekte objektiv, en UV-linse, en blitz, eller en solidt tripod, vi har det, der gør dit kamera endnu mere alsidigt. Kom forbi og udforsk, hvordan det rette tilbehør kan forvandle dine øjeblikke til noget ekstraordinært."
+      />
+    </div>
   </section></Layout
 >
 
@@ -113,11 +124,26 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
 </script>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   .Kameraside {
     margin: auto 130px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .box-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #camera-anchor,
+  #film-anchor,
+  #tilbehor-anchor {
+    scroll-margin-top: 60px;
   }
 
   .introtext,
@@ -146,8 +172,8 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
   .infoboxes-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin: 20px 0;
+    gap: 2rem;
+    margin: 20px 0px;
   }
 
   @media screen and (max-width: 1300px) {
@@ -168,6 +194,13 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
     .Kameraside {
       margin: auto;
       width: calc(100% - 20px);
+    }
+
+    CameraCard {
+      margin: auto;
+      right: 0;
+      max-width: 100%;
+      width: 200px;
     }
   }
 </style>
