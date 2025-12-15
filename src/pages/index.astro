@@ -9,12 +9,13 @@ import gul_top from "../img/gul_bolge_top.webp";
 import gul_bund from "../img/gul_bolge_bund.webp";
 import hvid_top from "../img/hvid_top.webp";
 import Karrusel_ex from "../components/Karrusel.astro";
+import iglogo from "../img/iglogoblue.webp";
 ---
 
 <Layout>
     <section class="grid_1-1 hero">
         <div><script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
-<dotlottie-wc src="https://lottie.host/17751df1-2dcd-45cb-8e2c-555116030c99/NIVRt20woD.lottie" autoplay loop></dotlottie-wc>
+<dotlottie-wc src="https://lottie.host/17751df1-2dcd-45cb-8e2c-555116030c99/NIVRt20woD.lottie" style="height: 380px;" autoplay loop></dotlottie-wc>
 </div>
 <h1>Analog magi i et digitalt univers, kom og mød kameraer med sjæl.</h1>
     </section>
@@ -35,7 +36,9 @@ Med årtiers erfaring og en passion for kvalitet kan du stole på, at vi guider 
 
 <img class="streach" src={hvid_top.src} alt="">
 <div class="hvid_bg">
-    <section class="grid_1-1">
+    <section>
+    <h2 class="h2">VI TILBYDER OGSÅ:</h2>
+    <div class="grid_1-1">
 <article class="dark_blue">
     <div class="flex_r">
     <img class="dark_blue_img" src={kontorartikler.src} alt="Illustration af printer, samt rammer">
@@ -53,22 +56,43 @@ Med årtiers erfaring og en passion for kvalitet kan du stole på, at vi guider 
 
 <article class="light_blue">
     <h3>GLS</h3>
-    <div class="grid_1-1 flex_r_web"><p>Du kan både sende og hente dine pakker fra GLS hos NV Foto.</p>
+    <div class="flex_r_web"><p class="light_blue_p">Du kan både sende og hente dine pakker fra GLS hos NV Foto.</p>
     <img class="light_blue_img" src={GLS.src} alt="GLS pakkeshop label"></div>
 </article>
 
 <article class="light_blue">
     <h3>INSTA-FÆLLESSKAB</h3>
-    <div class="grid_1-1 flex_r_web"><p>Følg os på Instagram for tips, nyheder og små glimt af det, der sker i butikken.</p>
-    <img class="light_blue_img"  src={GLS.src} alt=""></div>
+    <div class="flex_r_web"><div><p class="light_blue_p">Følg os på Instagram for tips, nyheder og små glimt af det, der sker i butikken.</p>
+    <a href="https://www.instagram.com/nv.foto.dk/" target="_blank" aria-label="Knap til NV-FOTO's instagram" id="ig_btn">@NV.FOTO.DK</a></div>
+    <a href="https://www.instagram.com/nv.foto.dk/" target="_blank"><img class="light_blue_img"  src={iglogo.src} alt=""></a></div>
 </article>
-    </section>
+</section>
+</div>
 </div>
 </Layout>
 
  
 <style>
-
+#ig_btn {
+    display: inline-block;
+        text-decoration: none;
+        background-color: #FFC446;
+        border-style: solid;
+        border-radius: 25px;
+        border-color: #364775;
+        text-align: center;
+        font-family: montserrat-sb;
+        margin-top: 30px;
+        cursor: pointer;
+        box-shadow: 0px 5px 0px #FFC446;
+        padding: 14px;
+        color: #091F5B;
+        margin-top: -20px;
+    }
+    #ig_btn:hover {
+        box-shadow: none;
+        transform: translateY(5%);
+    }
     .hero {
         margin-bottom: 100px;
         margin-top: 90px;
@@ -76,6 +100,7 @@ Med årtiers erfaring og en passion for kvalitet kan du stole på, at vi guider 
     .hvid_bg {
         background-color: white;
         padding-top: 60px;
+        padding-bottom: 60px;
     }
     .gul_bg {
         background-color: #ffd87d;
@@ -89,7 +114,6 @@ Med årtiers erfaring og en passion for kvalitet kan du stole på, at vi guider 
         background-color: #E5F3FF;
         border-radius: 25px;
         padding: 20px;
-        margin-bottom: 40px;
     }
     .font_light {
         color: white;
@@ -148,6 +172,7 @@ margin-bottom: 10px;
 .light_blue_img {
     max-height: 160px;
     width: auto;
+    border-radius: 25px;
 }
 .dark_blue_img_moenter {
     max-height: 80px;
@@ -155,8 +180,22 @@ margin-bottom: 10px;
 }
 @media (max-width: 799px) {
     .light_blue {
+        position: relative;
         margin-top: 60px;
     }
+    .light_blue_img {
+        display: flex;
+        margin: 0 auto;
+        max-width: 200px;
+        height: auto;
+        margin
+    }
+    dotlottie-wc {
+        max-height: 250px;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
     .flex_r {
         position: relative;
         display: flex;
