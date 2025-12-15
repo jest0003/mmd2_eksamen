@@ -21,37 +21,42 @@ const { src, H2, Ptext1, Ptext2 } = Astro.props;
 
   h2,
   p {
-    padding: 20px 40px;  }
+    padding: 20px 10px;
+  }
 
-p {
-  max-width: 80%;
-}
+  .text-container p {
+    max-width: 80%;
+  }
 
   .pas-section {
     background-color: #ffd87d;
     display: flex;
     flex-direction: row;
-padding: 10px;
+    padding: 10px;
     border-radius: 10px;
-  }	
+  }
 
   @media (max-width: 1000px) {
-  .pas-section {
-      margin: auto;
-      width: calc(100% - 20px);
+    .pas-section {
+      padding: 20;
       flex-direction: column;
-      padding: 0;
+    }
+
+    .text-container {
+      padding: 20px 10px;
     }
 
     .passportillustration {
       max-width: 100%;
       margin-top: 10px;
+      padding: 0px;
     }
-    
-  .pasimg-container {
-    margin: auto;
+
+    .pasimg-container {
+      margin: auto;
+    }
+    .text-container p {
+      max-width: 100%;
+    }
   }
-
 </style>
-
-

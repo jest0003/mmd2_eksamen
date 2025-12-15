@@ -50,39 +50,34 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
       headline="INSTAX"
       bodytext="Instax er for dig, der vil fange livets små, sjove og uforglemmelige øjeblikke og have dem i hånden med det samme. Med sit ikoniske, kompakte design og farverige billeder er Instax perfekt til at skabe fysiske minder, der er klar til at blive sat på køleskabet, sat i rammer eller delt med venner. Ideelt til fester, rejser eller bare en hyggelig dag med vennerne."
     />
-    <div class="infoboxes">
+    <div class="infoboxes-container">
       <InfoBox>
-        <section class="infobox">
-          <h2>FILM TIL DIT KAMERA</h2>
-          <p>
-            Når du køber et analog kamera, skal der film til, for at det kan
-            bruges.
-          </p>
-          <p>Vi bestræber os på at have disse film hjemme, i 135mm og 120mm:</p>
-          <ul>
-            <li>Fuji</li>
-            <li>Portra</li>
-            <li>Kodak</li>
-            <li>Ilford</li>
-          </ul>
-        </section>
+        <h2>FILM TIL DIT KAMERA</h2>
+        <p>
+          Når du køber et analog kamera, skal der film til, for at det kan
+          bruges.
+        </p>
+        <p>Vi bestræber os på at have disse film hjemme, i 135mm og 120mm:</p>
+        <ul>
+          <li>Fuji</li>
+          <li>Portra</li>
+          <li>Kodak</li>
+          <li>Ilford</li>
+        </ul>
       </InfoBox>
       <InfoBox>
-        <section class="infobox">
-          <h2>VIL DU SÆLGE DIT KAMERA?</h2>
-          <p>Dette skal du huske når du kommer ned med dit brugte kamera:</p>
-          <ul>
-            <li>
-              Hvis dit kamera er digitalt så husk at have det ladet op på
-              forhånd.
-            </li>
-            <li>
-              Medbring altid billede ID, det er lovpligtigt for at vi kan
-              gennemføre salget.
-            </li>
-            <p>På forhånd, tak!</p>
-          </ul>
-        </section>
+        <h2>VIL DU SÆLGE DIT KAMERA?</h2>
+        <p>Dette skal du huske når du kommer ned med dit brugte kamera:</p>
+        <ul>
+          <li>
+            Hvis dit kamera er digitalt så husk at have det ladet op på forhånd.
+          </li>
+          <li>
+            Medbring altid billede ID, det er lovpligtigt for at vi kan
+            gennemføre salget.
+          </li>
+          <p>På forhånd, tak!</p>
+        </ul>
       </InfoBox>
     </div>
     <CameraCardnohover
@@ -90,8 +85,8 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
       headline="KAMERA TILBEHØR"
       bodytext="Hos NV Foto finder du alt det tilbehør, der gør din fotografoplevelse endnu bedre. Uanset om du leder efter det perfekte objektiv, en UV-linse, en blitz, eller en solidt tripod, vi har det, der gør dit kamera endnu mere alsidigt. Kom forbi og udforsk, hvordan det rette tilbehør kan forvandle dine øjeblikke til noget ekstraordinært."
     />
-  </section>
-</Layout>
+  </section></Layout
+>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -129,12 +124,16 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
     margin-bottom: 20px;
   }
 
-  .infobox h2,
-  .infobox p {
+  .infoboxes-container h2,
+  .infoboxes-container p {
     color: #ffffff;
   }
 
-  .infobox ul {
+  .infoboxes-container h2 {
+    font-size: clamp(24px, 2vw, 42px);
+  }
+
+  .infoboxes-container ul {
     color: #ffffff;
     padding-left: 20px;
     font-family: montserrat-r;
@@ -142,12 +141,20 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
     font-size: 20px;
   }
 
-  .infoboxes {
+  .infoboxes-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin: 40px 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 20px 0;
   }
+
+  @media screen and (max-width: 1200px) {
+    .infoboxes-container {
+      grid-template-columns: 1fr;
+      margin: 20px 0;
+    }
+  }
+
   @media screen and (max-width: 1000px) {
     body,
     html {
@@ -159,19 +166,6 @@ import CameraCardnohover from "../components/CameraCardnohover.astro";
     .Kameraside {
       margin: auto;
       width: calc(100% - 20px);
-    }
-
-    .infoboxes {
-      grid-template-columns: 1fr;
-      margin: 20px 0;
-    }
-
-    h1 {
-      font-size: 32px;
-    }
-
-    p {
-      font-size: 18px;
     }
   }
 </style>
