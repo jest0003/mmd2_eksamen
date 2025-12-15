@@ -1,17 +1,18 @@
 ---
 import logo from "../img/NVFotologo.webp";
+import "../css/general.css";
 ---
 
 <header class="header">
   <div>
-    <a href="/"><img src={logo.src} alt="Logo" class="logo" /></a>
+    <a href="/"><img src={logo.src} alt="NV Foto logo" class="logo" /></a>
   </div>
 
   <nav class="nav-links">
-    <a href="/" class="nav-link">HJEM</a>
-    <a href="/fremkald" class="nav-link">FREMKALD</a>
-    <a href="/pasfoto" class="nav-link">PASFOTO</a>
-    <a href="/kamera" class="nav-link">KAMERA</a>
+    <a href="/" class="nav-link" aria-label="Hjem knap">HJEM</a>
+    <a href="/fremkald" class="nav-link" aria-label="Fremkald knap">FREMKALD</a>
+    <a href="/pasfoto" class="nav-link" aria-label="Pasfoto knap">PASFOTO</a>
+    <a href="/kamera" class="nav-link" aria-label="Kamera knap">KAMERA</a>
   </nav>
 
   <div
@@ -27,10 +28,18 @@ import logo from "../img/NVFotologo.webp";
   </div>
 
   <ul class="navmenu">
-    <li><a href="/" class="nav-link1">HJEM</a></li>
-    <li><a href="/fremkald" class="nav-link2">FREMKALD</a></li>
-    <li><a href="/pasfoto" class="nav-link3">PASFOTO</a></li>
-    <li><a href="/kamera" class="nav-link3">KAMERA</a></li>
+    <li><a href="/" class="nav-link1" aria-label="Hjem knap">HJEM</a></li>
+    <li>
+      <a href="/fremkald" class="nav-link2" aria-label="Fremkald knap"
+        >FREMKALD</a
+      >
+    </li>
+    <li>
+      <a href="/pasfoto" class="nav-link3" aria-label="Pasfoto knap">PASFOTO</a>
+    </li>
+    <li>
+      <a href="/kamera" class="nav-link3" aria-label="Kamera knap">KAMERA</a>
+    </li>
   </ul>
 </header>
 
@@ -46,12 +55,12 @@ import logo from "../img/NVFotologo.webp";
   .logo {
     height: 50px;
     width: auto;
-    margin: 0 0 0 5rem;
+    margin: 0 0 0 8rem;
   }
 
   .nav-links {
     display: flex;
-    margin-right: 5rem;
+    margin-right: 6rem;
   }
 
   .nav-link {
@@ -60,11 +69,8 @@ import logo from "../img/NVFotologo.webp";
     padding: 0 2rem;
     font-family: montserrat-m;
     font-size: 32px;
-    display: block;
     height: 110px;
     line-height: 110px;
-    position: relative;
-    box-sizing: border-box;
   }
 
   .nav-link:hover {

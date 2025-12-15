@@ -23,7 +23,7 @@ import Circle from "../img/circleelement.webp";
   .camera-section {
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 40px;
+    padding: 2rem;
     margin: 20px 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
@@ -37,16 +37,10 @@ import Circle from "../img/circleelement.webp";
 
   .img-container {
     position: relative;
-    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 20px;
-  }
-
-  .camera-img-wrapper {
-    position: relative;
-    display: inline-block;
   }
 
   .Camimg {
@@ -88,27 +82,19 @@ import Circle from "../img/circleelement.webp";
   }
 
   .text-container {
-    flex: 1;
     padding: 20px 10px;
-    text-align: left;
   }
 
   .text-container h2 {
     margin-top: 0;
-    font-size: 2em;
-  }
-
-  .text-container p {
-    line-height: 1.5;
   }
 
   @media (max-width: 1000px) {
     .img-text-container {
       flex-direction: column;
-      text-align: center;
     }
     .img-container {
-      margin-top: 20px;
+      margin-top: 30px;
       margin-right: 50px;
       order: -1;
     }
@@ -119,17 +105,15 @@ import Circle from "../img/circleelement.webp";
     .Circle {
       margin: auto;
       right: auto;
-      bottom: -10px;
+      bottom: -5px;
     }
 
     .text-container h2 {
-      font-size: 24px;
       margin-top: 20px;
     }
 
-    .camera-section p,
-    li {
-      font-size: 18px;
+    .camera-section {
+      padding: 20px;
     }
   }
 </style>
