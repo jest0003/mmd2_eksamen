@@ -1,5 +1,5 @@
 ---
-const { src, img, headline, bodytext, hoverSrc, hoverimg } = Astro.props;
+const { src, img, headline, bodytext, hoverSrc } = Astro.props;
 import Circle from "../img/circleelement.webp";
 ---
 
@@ -52,15 +52,15 @@ import Circle from "../img/circleelement.webp";
   }
 
   .camera-section {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 20px 0px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
     overflow: visible;
   }
 
   .img-text-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     position: relative;
@@ -122,6 +122,7 @@ import Circle from "../img/circleelement.webp";
   @media (max-width: 1000px) {
     .img-text-container {
       flex-direction: column;
+      padding: 20px;
     }
     .img-container {
       margin-top: 30px;
@@ -145,9 +146,6 @@ import Circle from "../img/circleelement.webp";
 
     .text-container h2 {
       margin-top: 20px;
-    }
-    .camera-section {
-      padding: 20px;
     }
   }
 </style>

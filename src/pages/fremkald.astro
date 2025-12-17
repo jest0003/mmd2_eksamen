@@ -4,138 +4,147 @@ import "../css/general.css";
 import filmimg from "../img/filmrulle.webp";
 import CTAbtn from "../components/CTAbtn.astro";
 import Priskort from "../components/Priskort.astro";
-
 ---
 
 <Layout>
-<section class="fremkald-side">
+  <section class="fremkald-side">
+    <div class="grid-intro">
+      <div class="heading-text">
+        <h1>FREMKALD</h1>
+        <p>
+          Vi har vores eget laboratorie hvor vi fremkalder billeder fra digital-
+          og analog kamera. Vi fremkalder også billeder direkte fra din
+          smartphone! Få dine minder fremkaldt – aflevér din film i butikken i
+          dag!
+        </p>
 
-
-<section class="grid-intro">
-
-<div>
-
-            <h1>FREMKALD</h1>
-            <p>Vi har vores eget laboratorie hvor vi fremkalder billeder fra digital- og  analog kamera. Vi fremkalder også billeder direkte fra din smartphone!
-            Få dine minder fremkaldt – aflevér din film i butikken i dag! </p>
-        
-
-        <div class="box flex" >
-            <CTAbtn href="#film-pris" aria-label="Film">Film</CTAbtn>
-            <CTAbtn href="#digital-pris" aria-label="Digitalt medie">Digitalt medie</CTAbtn>
-            <CTAbtn href="#video-pris" aria-label="Båndvideo">Båndvideo</CTAbtn>
+        <div class="box flex">
+          <CTAbtn href="#film-pris" aria-label="Film">Film</CTAbtn>
+          <CTAbtn href="#digital-pris" aria-label="Digitalt medie"
+            >Digitalt medie</CTAbtn
+          >
+          <CTAbtn href="#video-pris" aria-label="Båndvideo">Båndvideo</CTAbtn>
         </div>
 
+        <h3 class="obs-text">
+          OBS! Der pålægges gebyr på alt sort hvid film og ekstra leverings tid
+          (3-5 dage i stedet for 1-2 dage)
+        </h3>
+      </div>
 
-     
-            <h3>OBS! Der pålægges gebyr på alt sort hvid film og ekstra leverings tid (3-5 dage i stedet for 1-2 dage)</h3>
-        
+      <div img-container>
+        <img src={filmimg.src} alt="Logo" class="roll-img" />
+      </div>
+    </div>
 
-</div>
+    <Priskort />
 
-<div>
-    <img src={filmimg.src} alt="Logo" />
-</div>
+    <section id="gul-kasse">
+      <h3>FILM TIL DIT KAMERA</h3>
+      <p>
+        Når du køber et analog kamera, skal der film til, for at det kan bruges.
+      </p>
+      <p>Vi bestræber os på at have disse film hjemme, i 135mm og 120mm:</p>
 
-</section>
+      <ul>
+        <li>Fuji</li>
+        <li>Portra</li>
+        <li>Kodak</li>
+        <li>Illford</li>
+      </ul>
+    </section>
+  </section>
 
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<Priskort></Priskort>
+    #film-pris,
+    #digital-pris,
+    #video-pris {
+      scroll-margin-top: 60px;
+    }
 
-<section id="gul-kasse">
+    .fremkald-side {
+      margin: auto 130px;
+      display: flex;
+      flex-direction: column;
+    }
 
-<h3>FILM TIL DIT KAMERA</h3>
-<p>Når du køber et analog kamera, skal der film til, for at det kan bruges.</p>
-<p>Vi bestræber os på at have disse film hjemme, i 135mm og 120mm:</p>
+    section {
+      max-width: 1300px;
+    }
 
-<ul>
-    <li>Fuji</li>
-    <li>Portra</li>
-    <li>Kodak</li>
-    <li>Illford</li>
-</ul>
+    .flex {
+      display: flex;
+      flex-direction: column;
+      flex-basis: max-content;
+    }
 
-</section>
-</section>
+    .img-container {
+      display: flex;
+    }
 
-<style>
-html{
-    scroll-behavior: smooth;
-}
+    .roll-img {
+      height: clamp(250px, 30vw, 450px);
+      background-color: #e5f3ff;
+      padding: 30px 50px;
+      border-radius: 15px;
+      position: relative;
+      top: 7%;
+      margin-left: 40px;
+    }
 
-#film-pris, #digital-pris, #video-pris{
-    scroll-margin-top: 60px;
-}
+    #gul-kasse {
+      background-color: #ffd87d;
+      padding: 50px;
+      border-radius: 15px;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.fremkald-side{
-    margin: auto 130px;
-    display: flex;
-    flex-direction: column;
-}
+    ul,
+    li {
+      font-family: montserrat-r;
+      font-size: 20px;
+    }
 
-section{
-  margin: 100px;
-}
+    .grid-intro {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      margin-bottom: 3rem;
+    }
 
+    .grid-intro div:last-child {
+      justify-self: right;
+    }
 
-.flex{
-    display: flex;
-    flex-direction: column;
-    flex-basis: max-content;
-}
+    @media (max-width: 800px) {
+      .fremkald-side {
+        margin: auto;
+        width: calc(100% - 20px);
+      }
 
-img{
-    max-width: 100%;
-    height: 400px;
-    background-color: #E5F3FF;
-    padding: 60px;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-radius: 30px;
-}
+      .grid-intro {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
 
+      .grid-intro div:last-child {
+        justify-self: center;
+      }
 
-#gul-kasse{
-    background-color: #FFD87D;
-    padding: 50px;
-    border-radius: 30px;
-    margin: 60px auto;
-    width: 85%;
-}
+      .roll-img {
+        margin: 30px auto;
+        top: 0;
+        padding: 30px 108px 30px 108px;
+      }
 
-ul,li {
-  font-family: montserrat-r;
-  font-size: 20px;
-}
-
-.grid-intro{
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-}
-
-.grid-intro div:last-child{
- justify-self: right;
-}
-
-@media (max-width: 800px) {
-    .grid-intro{
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.grid-intro div:last-child{
- justify-self: center;
-}
-
-.fremkald-side{
-    margin: auto;
-    width: calc(100%-20px);
-}
-
-}
-
-
-</style>
-
-  
+      .heading-text,
+      .obs-text {
+        margin-right: 10px;
+      }
+    }
+  </style>
 </Layout>

@@ -62,7 +62,7 @@ import CTAbtn from "../components/CTAbtn.astro";
     </div>
     <div class="infoboxes-container" id="film-anchor">
       <InfoBox>
-        <h2>FILM TIL DIT KAMERA</h2>
+        <h3>FILM TIL DIT KAMERA</h3>
         <p>
           Når du køber et analog kamera, skal der film til, for at det kan
           bruges.
@@ -76,7 +76,7 @@ import CTAbtn from "../components/CTAbtn.astro";
         </ul>
       </InfoBox>
       <InfoBox>
-        <h2>VIL DU SÆLGE DIT KAMERA?</h2>
+        <h3>VIL DU SÆLGE DIT KAMERA?</h3>
         <p>Dette skal du huske når du kommer ned med dit brugte kamera:</p>
         <ul>
           <li>
@@ -134,13 +134,13 @@ import CTAbtn from "../components/CTAbtn.astro";
     margin-bottom: 20px;
   }
 
-  .infoboxes-container h2,
+  .infoboxes-container h3,
   .infoboxes-container p {
     color: #ffffff;
   }
 
-  .infoboxes-container h2 {
-    font-size: clamp(24px, 2vw, 42px);
+  .infoboxes-container h3 {
+    font-size: 24px;
   }
 
   .infoboxes-container ul {
@@ -154,14 +154,13 @@ import CTAbtn from "../components/CTAbtn.astro";
   .infoboxes-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 20px 0px;
+    gap: 3rem;
+    margin-bottom: 3rem;
   }
 
   @media screen and (max-width: 1300px) {
     .infoboxes-container {
       grid-template-columns: 1fr;
-      margin: 20px 0;
     }
   }
 

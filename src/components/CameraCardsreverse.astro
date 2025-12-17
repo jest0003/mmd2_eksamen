@@ -50,15 +50,19 @@ import Circle from "../img/circleelement.webp";
 
 <style>
   .camera-section {
+    margin-bottom: 3rem;
+    overflow: visible;
+  }
+
+  .img-text-container {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 2rem;
     margin: 20px 0px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: visible;
-  }
-
-  .img-text-container {
+    display: flex;
+    align-items: center;
+    position: relative;
     display: flex;
     align-items: center;
     position: relative;
@@ -120,6 +124,7 @@ import Circle from "../img/circleelement.webp";
 
   @media (max-width: 1000px) {
     .img-text-container {
+      padding: 20px;
       flex-direction: column;
     }
     .img-container {
@@ -143,10 +148,6 @@ import Circle from "../img/circleelement.webp";
 
     .text-container h2 {
       margin-top: 20px;
-    }
-
-    .camera-section {
-      padding: 20px;
     }
   }
 </style>
