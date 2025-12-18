@@ -26,14 +26,14 @@ import Priskort from "../components/Priskort.astro";
           <CTAbtn href="#video-pris" aria-label="Båndvideo">Båndvideo</CTAbtn>
         </div>
 
-        <h3 class="obs-text">
+        <p class="obs-text">
           OBS! Der pålægges gebyr på alt sort hvid film og ekstra leverings tid
           (3-5 dage i stedet for 1-2 dage)
-        </h3>
+        </p>
       </div>
 
-      <div img-container>
-        <img src={filmimg.src} alt="Logo" class="roll-img" />
+      <div class="img-container">
+        <img src={filmimg.src} alt="Film rulle illustration" class="roll-img" />
       </div>
     </div>
 
@@ -118,6 +118,11 @@ import Priskort from "../components/Priskort.astro";
 
     .grid-intro div:last-child {
       justify-self: right;
+    }
+
+    .obs-text {
+      font-size: clamp(20px, 22px, 24px);
+      font-weight: bold;
     }
 
     @media (max-width: 800px) {

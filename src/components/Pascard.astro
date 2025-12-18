@@ -5,7 +5,12 @@ const { src, H2, Ptext1, Ptext2 } = Astro.props;
 <section class="pas-section">
   <div class="img-text-container">
     <div class="pasimg-container">
-      <img src={src} alt="Passport illustration" class="passportillustration" />
+      <img
+        src={src}
+        alt="Passport illustration"
+        class="passportillustration"
+        fetchpriority="high"
+      />
     </div>
     <div class="text-container">
       <h2>{H2}</h2>
@@ -31,7 +36,8 @@ const { src, H2, Ptext1, Ptext2 } = Astro.props;
   }
 
   .passportillustration {
-    width: 300px;
+    width: auto;
+    max-width: 300px;
     padding: 20px 20px 20px 0px;
   }
 
@@ -64,6 +70,7 @@ const { src, H2, Ptext1, Ptext2 } = Astro.props;
     }
 
     .pasimg-container {
+      max-width: 250px;
       margin: auto;
     }
 

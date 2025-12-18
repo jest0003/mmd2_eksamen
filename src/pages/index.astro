@@ -17,10 +17,13 @@ import iglogo from "../img/iglogoblue.webp";
     <div>
       <script
         src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
-        type="module"></script>
+        type="module"
+        aria-label="Lottie animation"></script>
       <dotlottie-wc
         src="https://lottie.host/17751df1-2dcd-45cb-8e2c-555116030c99/NIVRt20woD.lottie"
         style="height: 380px;"
+        aria-label="Lottie animation"
+        preload="none"
         autoplay
         loop></dotlottie-wc>
     </div>
@@ -48,13 +51,13 @@ import iglogo from "../img/iglogoblue.webp";
       />
     </section>
   </div>
-  <img class="streach" src={gul_bund.src} alt="" />
+  <img class="streach" src={gul_bund.src} alt="Gul baggrund" />
   <section>
     <h2>UDFORSK</h2>
     <Karrusel_ex />
   </section>
 
-  <img class="streach" src={hvid_top.src} alt="" />
+  <img class="streach" src={hvid_top.src} alt="Hvid baggrund" />
   <div class="hvid_bg">
     <section>
       <h2 class="h2">VI TILBYDER OGSÅ:</h2>
@@ -127,8 +130,15 @@ import iglogo from "../img/iglogoblue.webp";
                 id="ig_btn">@NV.FOTO.DK</a
               >
             </div>
-            <a href="https://www.instagram.com/nv.foto.dk/" target="_blank"
-              ><img class="light_blue_img" src={iglogo.src} alt="" /></a
+            <a
+              href="https://www.instagram.com/nv.foto.dk/"
+              target="_blank"
+              aria-label="Knap til Instagram"
+              ><img
+                class="light_blue_img"
+                src={iglogo.src}
+                alt="Instagram logo"
+              /></a
             >
           </div>
         </article>
@@ -244,6 +254,11 @@ import iglogo from "../img/iglogoblue.webp";
     width: auto;
     border-radius: 25px;
   }
+
+  .light_blue_p {
+    margin: 10px;
+  }
+
   .dark_blue_img_moenter {
     max-height: 80px;
     width: auto;
