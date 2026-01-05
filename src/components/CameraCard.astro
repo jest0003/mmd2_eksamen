@@ -22,21 +22,21 @@ import Circle from "../img/circleelement.webp";
     const imgContainers = document.querySelectorAll(".img-container");
 
     imgContainers.forEach((container) => {
-      container.addEventListener("touchstart", function (e) {
+      container.addEventListener("touchstart", function () {
         const hoverImg = this.querySelector(".hover-img");
         if (hoverImg) {
           hoverImg.style.opacity = "1";
         }
       });
 
-      container.addEventListener("touchmove", function (e) {
+      container.addEventListener("touchmove", function () {
         const hoverImg = this.querySelector(".hover-img");
         if (hoverImg) {
           hoverImg.style.opacity = "1";
         }
       });
 
-      container.addEventListener("touchend", function (e) {
+      container.addEventListener("touchend", function () {
         const hoverImg = this.querySelector(".hover-img");
         if (hoverImg) {
           hoverImg.style.opacity = "0";
