@@ -150,6 +150,43 @@ import analog from "../img/oldschoolanalog.webp";
     const prev = document.querySelector("#prev")!;
     const next = document.querySelector("#next")!;
 
+    //TOUCH TILFØJELSE-----------------------------------------
+    let startX = 0;
+    let endX = 0;
+    const swipe = 50;
+
+
+    //triggers når man rør ved skærmen, clientX er den vandrette position (x-aksen)
+    karrusel.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+    
+    //Triggers når man løfter fingeren, bruger changedTouches fordi den også husker fingerens forrige position
+    karrusel.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+
+    //afgører hvilken vej der bliver swipet.
+  function handleSwipe() {
+  const diff = startX - endX;
+  const visible = visibleCard();
+
+  if (diff > swipe) {
+    if (index < karrusel.children.length - visible) {
+      index++;
+      updateKarrusel();
+    }
+  }
+  if (diff < -swipe) {
+    if (index > 0) {
+      index--;
+      updateKarrusel();
+    }
+  }
+}
+///TOUCH SLUT--------------------------------------------------
+
     //Holder styr på hvilket card er aktivt/synligt
     let index = 0;
 
