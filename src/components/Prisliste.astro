@@ -10,7 +10,7 @@ const { data, id } = Astro.props;
         <h2>Film</h2>
         <h3>135 mm</h3>
         <p>1–2 dage</p>
-        <p>Engangskamera 10 kr ekstra — ved APS er der gebyr på 10 til 50 kr alt efter hvad der skal laves. </p>
+        <p>Engangskamera 10 kr. ekstra — ved APS spørg.</p>
 
 
 <section class="pris-grid">
@@ -26,9 +26,9 @@ const { data, id } = Astro.props;
               {id === 1 && (
                 <>
                 <div class="box">
-                <div class="price-row"><span>{data.pristekst_1}</span><span class="pris">{data.pris_1}</span></div>
-                <div class="price-row"><span>{data.pristekst_2}</span><span class="pris">{data.pris_2}</span></div>
-                <div class="price-row"><span>{data.pristekst_3}</span><span class="pris">{data.pris_3}</span></div>
+                <div class="price-row"><span>{data.tekst_1}</span><span class="pris">{data.pris_1}</span></div>
+                <div class="price-row"><span>{data.tekst_2}</span><span class="pris">{data.pris_2}</span></div>
+                <div class="price-row"><span>{data.tekst_3}</span><span class="pris">{data.pris_3}</span></div>
                 </div>
                 </>
               )}
@@ -51,7 +51,7 @@ const { data, id } = Astro.props;
               {id === 1 && (
                 <>
                 <div class="box">
-                <div class="price-row"><span>{data.pristekst_4}</span><span class="pris">{data.pris_1}</span></div>
+                <div class="price-row"><span>{data.tekst_4}</span><span class="pris">{data.pris_1}</span></div>
                 </div>
                 </>
               )}
@@ -74,9 +74,9 @@ const { data, id } = Astro.props;
               {id === 1 && (
                 <>
                 <div class="box">
-                <div class="price-row"><span>{data.pristekst_5}</span><span class="pris">{data.pris_5}</span></div>
-                <div class="price-row"><span>{data.pristekst_6}</span><span class="pris">{data.pris_6}</span></div>
-                <div class="price-row"><span>{data.pristekst_7}</span><span class="pris">{data.pris_7}</span></div>
+                <div class="price-row"><span>{data.tekst_5}</span><span class="pris">{data.pris_5}</span></div>
+                <div class="price-row"><span>{data.tekst_6}</span><span class="pris">{data.pris_6}</span></div>
+                <div class="price-row"><span>{data.tekst_7}</span><span class="pris">{data.pris_7}</span></div>
                 </div>
                 </>
               )}
@@ -106,12 +106,12 @@ const { data, id } = Astro.props;
               {id === 2 && (
                 <>
                 <div class="box">
-                <div class="price-row"><span>{data.pristekst_1}</span><span class="pris">{data.pris_1}</span></div>
-                <div class="price-row"><span>{data.pristekst_2}</span><span class="pris">{data.pris_2}</span></div>
-                <div class="price-row"><span>{data.pristekst_3}</span><span class="pris">{data.pris_3}</span></div>
-                <div class="price-row"><span>{data.pristekst_4}</span><span class="pris">{data.pris_4}</span></div>
-                <div class="price-row"><span>{data.pristekst_5}</span><span class="pris">{data.pris_5}</span></div>
-                <div class="price-row"><span>{data.pristekst_6}</span><span class="pris"><a href="#kontakt-info" aria-label="Kontakt os her">Kontakt os</a></span></div>
+                <div class="price-row"><span>{data.tekst_1}</span><span class="pris">{data.pris_1}</span></div>
+                <div class="price-row"><span>{data.tekst_2}</span><span class="pris">{data.pris_2}</span></div>
+                <div class="price-row"><span>{data.tekst_3}</span><span class="pris">{data.pris_3}</span></div>
+                <div class="price-row"><span>{data.tekst_4}</span><span class="pris">{data.pris_4}</span></div>
+                <div class="price-row"><span>{data.tekst_5}</span><span class="pris">{data.pris_5}</span></div>
+                <div class="price-row"><span>{data.tekst_6}</span><span class="pris"><a href="#kontakt-info" aria-label="Kontakt os her">Kontakt os</a></span></div>
                 </div>
                 </>
               )}
@@ -141,7 +141,7 @@ const { data, id } = Astro.props;
               {id === 3 && (
                 <>
                 <div class="box">
-                <div class="price-row"><span>{data.pristekst_1}</span><span class="pris">{data.pris_1}</span></div>
+                <div class="price-row"><span>{data.tekst_1}</span><span class="pris">{data.pris_1}</span></div>
                 </div>
                 </>
               )}
@@ -165,7 +165,7 @@ const { data, id } = Astro.props;
               {id === 3 && (
                 <>
                 <div class="box">
-                <div class="price-row"><span>{data.pristekst_2}</span></div>
+                <div class="price-row"><span>{data.tekst_2}</span></div>
                 </div>
                 </>
               )}
