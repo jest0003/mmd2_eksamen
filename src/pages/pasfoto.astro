@@ -12,7 +12,7 @@ import InfoboxWhite from "../components/InfoboxWhite.astro";
     <Pascard
       src={Pas.src}
       H2="FÅ TAGET DIT PASFOTO HOS NV FOTO"
-      Ptext1="Hos NV Foto står vi klar til at tage dit næste pasfoto, så du er klar til din næste rejse. Vi følger de danske retningslinjer for pasfotos."
+      Ptext1="Hos NV-Foto står vi klar til at tage dit næste pasfoto, så du er klar til din næste rejse. Vi følger de danske retningslinjer for pasfotos."
       Ptext2="Skal du have taget pasfotografi med andre landes retningslinjer, skal du selv bringe information om landets gældende retningslinjer med, så vi kan sørge for, at dit billede er helt som det skal være."
     />
     <div class="Pasinfo-boxes">
@@ -27,15 +27,27 @@ import InfoboxWhite from "../components/InfoboxWhite.astro";
         <InfoboxWhite>
           <h2>PASFOTOGRAFI TIDER:</h2>
           <p class="Infotext">Mandag - Fredag:</p>
-          <ul class="Tidspunkt-liste">
-            <li>Børn: 9:00 - 16:00</li>
-            <li>Voksen: 9:00 - 17:00</li>
-          </ul>
-             <p class="Infotext">Lørdag:</p>
-          <ul class="Tidspunkt-liste">
-            <li>Børn: 9:00 - 11:30</li>
-            <li>Voksen: 9:00 - 12:00</li>
-          </ul>
+          <section class="flex_row">
+            <div>
+<p>Børn:</p>
+<p>Voksen:</p>
+</div>
+<div class="tider">
+  <p>9:00 - 16:00</p>
+  <p>9:00 - 17:00</p>
+</div>
+          </section>
+          <p class="Infotext">Lørdag:</p>
+          <section class="flex_row">
+            <div>
+              <p>Børn:</p>
+              <p>Voksen: </p>
+            </div>
+            <div class="tider">
+              <p>9:00 - 11:30</p>
+              <p>9:00 - 12:00</p>
+            </div>
+          </section>
     </InfoboxWhite>
     </div>
   </section>
@@ -46,7 +58,9 @@ import InfoboxWhite from "../components/InfoboxWhite.astro";
     max-width: 1300px;
   }
 
-
+.tider {
+  padding-left: 10px;
+}
   .Passide {
     margin: auto 130px;
     display: flex;
@@ -63,6 +77,10 @@ import InfoboxWhite from "../components/InfoboxWhite.astro";
     display: flex;
     flex-direction: column;
     height: 100%;
+  }
+  .flex_row {
+    display: flex;
+    flex-direction: row;
   }
   
     .Pasinfo-boxes h2 {
